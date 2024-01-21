@@ -1,0 +1,432 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header.nav-container {
+    width: 100%;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    background-color: #2D3250;
+}
+
+header.nav-container .logo img {
+    width: 150px;
+    filter: invert(100%);
+}
+
+header.nav-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header.nav-container .nav-list li {
+    list-style-type: none;
+}
+
+header.nav-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+header.nav-container .nav-list li:hover a {
+    background-color: #fff;
+    color: #2D3250;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    padding: 2rem 4rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #2D3250;
+}
+
+main .hero {
+    display: flex;
+    align-items: center;
+}
+
+main .hero .hero-content .hero-title {
+    margin-block: 2rem;
+    font-size: 3rem;
+}
+
+main .hero .hero-content p {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+main .hero .hero-content button {
+    padding: 1rem 2rem;
+    border: 3px solid transparent;
+    border-radius: 36px;
+    margin-top: 1rem;
+    background-color: #2D3250;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .hero .hero-content button:hover {
+    border: 3px solid #2D3250;
+    background-color: transparent;
+    color: #2D3250;
+}
+
+main .hero .hero-image {
+    display: flex;
+}
+
+main .hero .hero-img img {
+    width: 300px;
+    min-width: 200px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+main aside {
+    position: fixed;
+    inset-block: 0;
+    inset-inline-end: 0;
+}
+
+main aside .social-media {
+    height: 100%;
+    display: flex;
+}
+
+main aside .social-media ul {
+    padding: 1.5rem 1rem;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    margin: auto;
+    background-color: #2D3250;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main aside .social-media li {
+    list-style-type: none;
+}
+
+main aside .social-media li a {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    transition: all 0.1s ease-in-out;
+    position: relative;
+}
+
+main aside .social-media li a .tooltip {
+    visibility: hidden;
+    width: 200px;
+    background-color: #F6B17A;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 1;
+    top: -25px;
+    right: 200%;
+    font-size: 1rem;
+}
+
+main aside .social-media li a .tooltip img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 24px;
+}
+
+main aside .social-media li a:hover {
+    color: #F6B17A;
+    cursor: pointer;
+}
+
+main aside .social-media li a:hover .tooltip {
+    visibility: visible;
+}
+
+main .skills {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .skills .skills-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 3rem;
+}
+
+main .skills .skills-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main .skills .skills-content .card {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+main .skills .skills-content .card .card-header {
+    text-align: center;
+    margin-inline: auto;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    background-color: #2D3250;
+    color: #fff;
+    width: 100%;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+}
+
+main .skills .skills-content .card .card-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem 2rem;
+    padding: 25px;
+    font-size: 3rem;
+    min-height: 200px;
+    border: 3px solid #2D3250;
+    border-top: 0px;
+    background-color: transparent;
+    color: #2D3250;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+    height: 100%;
+}
+
+main .skills .skills-content .card .card-content i:hover ~ i,
+main .skills .skills-content .card .card-content i:has(~ i:hover) {
+    opacity: 0.5;
+}
+
+main .about-me {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main .about-me-title {
+    align-items: center;
+    justify-content: center;
+    margin-block: 3rem;
+}
+
+main .about-me .about-me-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .about-me .about-me-content figure img {
+    width: 300px;
+    min-width: 250px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+main .projects {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main .projects .projects-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-block: 3rem;
+}
+
+main .projects .projects-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+main .projects .projects-content .projects-content-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    margin: 1rem 1rem;
+}
+
+main .projects .projects-content .projects-content-img img {
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.2s ease-in;
+    border-radius: 12px;
+}
+
+main .projects .projects-content .projects-content-img img:hover {
+    scale: 2;
+}
+
+footer {
+    display: flex;
+}
+
+footer .footer-col {
+    width: 100%;
+    background-color: #2D3250;
+    padding: 2rem;
+}
+
+footer .footer-col ul {
+    padding: 1.5rem 1rem;
+    margin: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+footer .footer-col ul li {
+    list-style-type: none;
+}
+
+footer .footer-col ul li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: #fff;
+    transition: all 0.2s ease-in-out;
+}
+
+footer .footer-col ul li a:hover {
+    background-color: #fff;
+    color: #2D3250;
+}
+
+footer .footer-col .social-links {
+    display: flex;
+    margin-block: 2rem;
+    padding-inline: 1.5rem;
+    font-size: 2.5rem;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+}
+
+footer .footer-col .social-links-title {
+    color: #fff;
+    position: relative;
+    margin-block: 1rem;
+}
+
+footer .footer-col .social-links-title::before {
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #F6B17A;
+    left: 0;
+    bottom: -10px;
+}
+
+footer .footer-col .social-links span a {
+    color: #fff;
+    transition: all 0.1s ease-in-out;
+}
+
+footer .footer-col .social-links span a:hover {
+    color: #F6B17A;
+}
+
+@media screen and (min-width: 1200px) {
+    footer .footer-col .social-links {
+        padding-right: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header.nav-container {
+        flex-direction: column;
+    }
+
+    header.nav-container .nav-list ul {
+        flex-wrap: wrap;
+        column-gap: 0.5rem;
+    }
+
+    main {
+        padding: 1rem 3rem;
+    }
+
+    main .hero {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    main .hero .hero-content .title {
+        font-size: 3rem;
+    }
+
+    main .hero .hero-img {
+        order: -1;
+    }
+
+    main .skills .skills-content {
+        flex-direction: column;
+    }
+
+    main .about-me .about-me-content {
+        flex-direction: column;
+    }
+
+    main .projects .projects-content .projects-content-img img:hover {
+        scale: 1.5;
+    }
+
+    footer .footer-col .social-links {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
